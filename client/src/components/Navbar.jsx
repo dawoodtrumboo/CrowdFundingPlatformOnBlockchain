@@ -35,7 +35,7 @@ const Navbar = () => {
 
         <Link to="/profile">
           <div className="w-[52px] h-[52px] rounded-full bg-[#2c2f32] flex justify-center items-center cursor-pointer">
-            <img src={thirdweb} alt="user" className="w-[60%] h-[60%] object-contain" />
+            <img src={logo} alt="user" className="w-[60%] h-[60%] object-contain" />
           </div>
         </Link>
       </div>
