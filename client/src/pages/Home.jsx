@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import { DisplayCompaigns } from '../components';
+import { DisplayCampaigns } from '../components';
 import { useStateContext } from '../context'
 
 const Home = () => {
@@ -21,7 +21,7 @@ const Home = () => {
   }, [address, contract]);
 
   return (
-    <DisplayCompaigns 
+    <DisplayCampaigns 
       title="All Campaigns"
       isLoading={isLoading}
       campaigns={campaigns}
