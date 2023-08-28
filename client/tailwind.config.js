@@ -5,6 +5,7 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    lightMode:'class',
     extend: {
       fontFamily: {
         epilogue: ['Epilogue', 'sans-serif'],

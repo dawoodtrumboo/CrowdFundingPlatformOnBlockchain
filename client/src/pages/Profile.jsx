@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 
-import { DisplayCampaigns } from '../components';
+import { DisplayCampaigns, HomeNav } from '../components';
 import { useStateContext } from '../context'
 
-const Profile = () => {
+const Profile = ({darkTheme}) => {
   const [isLoading, setIsLoading] = useState(false);
   const [campaigns, setCampaigns] = useState([]);
 
@@ -21,11 +21,15 @@ const Profile = () => {
   }, [address, contract]);
 
   return (
+    <>
+    <HomeNav darkTheme={darkTheme}/>
     <DisplayCampaigns 
-      title="All Campaigns"
+      title="Your Campaigns"
+      darkTheme={darkTheme}
       isLoading={isLoading}
       campaigns={campaigns}
     />
+    </>
   )
 }
 

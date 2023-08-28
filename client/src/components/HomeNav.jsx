@@ -1,35 +1,23 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 
-import DisplayCampaigns from './DisplayCampaigns';
 import { useStateContext } from '../context';
 import { CustomButton } from './';
 import { logo, menu, search, thirdweb } from '../assets';
 import { navlinks } from '../constants';
 
-const Navbar = (props) => {
+const HomeNav = ({darkTheme}) => {
   const navigate = useNavigate();
-  const [searchTerm, setsearchTerm] = useState('')
   const [isActive, setIsActive] = useState('dashboard');
   const [toggleDrawer, setToggleDrawer] = useState(false);
   const { connect, address } = useStateContext();
-  const handleClick = (e) =>{
-    const el = document.querySelector('#search-box');
-    const enteredTerm = el.value;
-
-    setsearchTerm(enteredTerm);
-  }
-
- 
 
   return (
-    <>    <div className="flex md:flex-row flex-col-reverse justify-between mb-[35px] gap-6">
-      <div className={`lg:flex-1 flex flex-row max-w-[458px] py-2 pl-4 pr-2 h-[52px] rounded-[100px] ${ props.darkTheme?"bg-[#1c1c24]":"bg-white"} `}>
-        <input  type="text" id='search-box' placeholder="Search for campaigns" className={`flex w-full font-epilogue font-normal 
-        text-[14px] placeholder:text-[#4b5264] bg-transparent outline-none ${props.darkTheme? "text-white" : "text-black"}`}
-        />
+    <div className="flex md:flex-row flex-col-reverse justify-between mb-[35px] gap-6">
+      <div className={`lg:flex-1 flex flex-row max-w-[458px] py-2 pl-4 pr-2 h-[52px] rounded-[100px] ${darkTheme? "bg-[#1c1c24]" : "bg-white"}`}>
+        <input type="text" placeholder="Search for campaigns" className={`flex w-full font-epilogue font-normal text-[14px] placeholder:text-[#4b5264] bg-transparent outline-none ${darkTheme? "text-white" : "text-black"}`} />
         
-        <div onClick={handleClick} className="w-[72px] h-full rounded-[20px] bg-[#4acd8d] flex justify-center items-center cursor-pointer">
+        <div className="w-[72px] h-full rounded-[20px] bg-[#4acd8d] flex justify-center items-center cursor-pointer">
           <img src={search} alt="search" className="w-[15px] h-[15px] object-contain"/>
         </div>
       </div>
@@ -46,7 +34,7 @@ const Navbar = (props) => {
         />
 
         <Link to="/profile">
-          <div className={`w-[52px] h-[52px] rounded-full flex justify-center items-center cursor-pointer ${ props.darkTheme? "bg-[#2c2f32]" : "bg-white"}`}>
+        <div className={`w-[52px] h-[52px] rounded-full flex justify-center items-center cursor-pointer ${ darkTheme? "bg-[#2c2f32]" : "bg-white"}`}>
             <img src={logo} alt="user" className="w-[60%] h-[60%] object-contain" />
           </div>
         </Link>
@@ -54,7 +42,7 @@ const Navbar = (props) => {
 
       {/* Small screen navigation */}
         <div className="sm:hidden flex justify-between items-center relative">
-        <div className="w-[40px] h-[40px] rounded-[10px] bg-[#2c2f32] flex justify-center items-center cursor-pointer">
+        <div className={`w-[40px] h-[40px] rounded-[10px] bg-[#2c2f32] flex justify-center items-center cursor-pointer`}>
             <img src={logo} alt="user" className="w-[60%] h-[60%] object-contain" />
           </div>
 
@@ -102,17 +90,8 @@ const Navbar = (props) => {
             </div>
           </div>
         </div>
-    </div>          
-    <DisplayCampaigns 
-      title="All Campaigns"
-      darkTheme={props.darkTheme}
-      isLoading={props.isLoading}
-      campaigns={props.campaigns}
-      searchTerm={searchTerm}
-
-    />
-    </>
+    </div>
   )
 }
 
-export default Navbar
+export default HomeNav

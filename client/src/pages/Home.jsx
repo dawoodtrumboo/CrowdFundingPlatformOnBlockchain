@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 
-import { DisplayCampaigns } from '../components';
+
+import { DisplayCampaigns, Navbar } from '../components';
 import { useStateContext } from '../context'
 
-const Home = () => {
+const Home = ({darkTheme}) => {
   const [isLoading, setIsLoading] = useState(false);
   const [campaigns, setCampaigns] = useState([]);
 
@@ -21,11 +22,13 @@ const Home = () => {
   }, [address, contract]);
 
   return (
-    <DisplayCampaigns 
-      title="All Campaigns"
-      isLoading={isLoading}
-      campaigns={campaigns}
-    />
+    <>
+    <Navbar
+    darkTheme={darkTheme}
+    isLoading={isLoading}
+    campaigns={campaigns}/>
+  
+    </>
   )
 }
 

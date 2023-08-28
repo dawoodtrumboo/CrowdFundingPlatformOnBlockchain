@@ -7,7 +7,7 @@ import { money } from '../assets';
 import { CustomButton, FormField, Loader } from '../components';
 import { checkIfImage } from '../utils';
 
-const CreateCampaign = () => {
+const CreateCampaign = ({darkTheme}) => {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
   const { createCampaign } = useStateContext();
@@ -22,6 +22,7 @@ const CreateCampaign = () => {
 
   const handleFormFieldChange = (fieldName, e) => {
     setForm({ ...form, [fieldName]: e.target.value })
+    
   }
 
   const handleSubmit = async (e) => {
@@ -41,16 +42,17 @@ const CreateCampaign = () => {
   }
 
   return (
-    <div className="bg-[#1c1c24] flex justify-center items-center flex-col rounded-[10px] sm:p-10 p-4">
+    <div className={` flex justify-center items-center flex-col rounded-[10px] sm:p-10 p-4 ${ darkTheme? "bg-[#1c1c24]" : "bg-white"}`}>
       {isLoading && <Loader />}
-      <div className="flex justify-center items-center p-[16px] sm:min-w-[380px] bg-[#3a3a43] rounded-[10px]">
-        <h1 className="font-epilogue font-bold sm:text-[25px] text-[18px] leading-[38px] text-white">Start a Campaign</h1>
+      <div className={`flex justify-center items-center p-[16px] sm:min-w-[380px] rounded-[10px] ${ darkTheme? "bg-[#3a3a43]" : "bg-[#F3F2F9]"}`}>
+        <h1 className={`font-epilogue font-bold sm:text-[25px] text-[18px] leading-[38px]  ${ darkTheme? "text-white" : "text-black"}`}>Start a Campaign</h1>
       </div>
 
       <form onSubmit={handleSubmit} className="w-full mt-[65px] flex flex-col gap-[30px]">
         <div className="flex flex-wrap gap-[40px]">
           <FormField 
             labelName="Your Name *"
+            darkTheme={darkTheme}
             placeholder="Aqeel Beigh"
             inputType="text"
             value={form.name}
@@ -58,6 +60,7 @@ const CreateCampaign = () => {
           />
           <FormField 
             labelName="Campaign Title *"
+            darkTheme={darkTheme}
             placeholder="Write a title"
             inputType="text"
             value={form.title}
@@ -67,6 +70,7 @@ const CreateCampaign = () => {
 
         <FormField 
             labelName="Story *"
+            darkTheme={darkTheme}
             placeholder="Write your story"
             isTextArea
             value={form.description}
@@ -81,6 +85,7 @@ const CreateCampaign = () => {
         <div className="flex flex-wrap gap-[40px]">
           <FormField 
             labelName="Goal *"
+            darkTheme={darkTheme}
             placeholder="ETH 0.50"
             inputType="text"
             value={form.target}
@@ -88,6 +93,7 @@ const CreateCampaign = () => {
           />
           <FormField 
             labelName="End Date *"
+            darkTheme={darkTheme}
             placeholder="End Date"
             inputType="date"
             value={form.deadline}
@@ -97,6 +103,7 @@ const CreateCampaign = () => {
 
         <FormField 
             labelName="Campaign image *"
+            darkTheme={darkTheme}
             placeholder="Place image URL of your campaign"
             inputType="url"
             value={form.image}
