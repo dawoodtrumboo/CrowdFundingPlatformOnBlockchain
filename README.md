@@ -3,7 +3,7 @@
 
 The project members include Dawood Trumboo, Aqeel Beigh, and Shaker Khan, who have collaborated to develop this innovative solution. Under the guidance and supervision of Dr. Sahil Sholla, our esteemed project supervisor, we aim to create a reliable and decentralized crowdfunding platform.</p>
 
-<p>[Presentation Link](https://www.canva.com/design/DAFspDCcT88/y1RbsjuErD1dG9crcXJhpw/edit)</p>
+[Presentation Link](https://www.canva.com/design/DAFspDCcT88/y1RbsjuErD1dG9crcXJhpw/edit) </br>
 [Web Link](https://crowd-funding-platform-on-blockchain.vercel.app/) [Wait for fetching of campaigns from the smartcontract, it takes some time]
 
 
