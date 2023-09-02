@@ -13,14 +13,14 @@ const HomeNav = ({darkTheme}) => {
   const { connect, address } = useStateContext();
 
   return (
-    <div className="flex md:flex-row flex-col-reverse justify-between mb-[35px] gap-6">
-      <div className={`lg:flex-1 flex flex-row max-w-[458px] py-2 pl-4 pr-2 h-[52px] rounded-[100px] ${darkTheme? "bg-[#1c1c24]" : "bg-white"}`}>
+    <div className="flex md:flex-row flex-col-reverse justify-end mb-[35px] gap-6">
+      {/* <div className={`lg:flex-1 flex flex-row max-w-[458px] py-2 pl-4 pr-2 h-[52px] rounded-[100px] ${darkTheme? "bg-[#1c1c24]" : "bg-white"}`}>
         <input type="text" placeholder="Search for campaigns" className={`flex w-full font-epilogue font-normal text-[14px] placeholder:text-[#4b5264] bg-transparent outline-none ${darkTheme? "text-white" : "text-black"}`} />
         
         <div className="w-[72px] h-full rounded-[20px] bg-[#4acd8d] flex justify-center items-center cursor-pointer">
           <img src={search} alt="search" className="w-[15px] h-[15px] object-contain"/>
         </div>
-      </div>
+      </div> */}
 
       <div className="sm:flex hidden flex-row justify-end gap-4">
         <CustomButton 

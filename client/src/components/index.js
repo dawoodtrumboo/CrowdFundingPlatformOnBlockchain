@@ -7,3 +7,5 @@ export {default as DisplayCampaigns} from './DisplayCampaigns';
 export {default as FundCard} from './FundCard';
 export {default as CountBox} from './CountBox';
 export {default as HomeNav} from './HomeNav';
+export {default as CampaignCard} from './CampaignCard';
+export {default as Icon} from './Icon';

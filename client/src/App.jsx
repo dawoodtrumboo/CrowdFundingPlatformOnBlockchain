@@ -10,6 +10,7 @@ import Landing from './pages/Landing';
 const App = () => {
 
   const [darkTheme, setDarkTheme] = useState(true);
+  
 
   const toggleTheme = () => {
     console.log('in')

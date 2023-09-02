@@ -16,12 +16,16 @@ const Icon = ({ styles, name, imgUrl, isActive, disabled, handleClick, darkTheme
 
 const Sidebar = ({handleTheme, darkTheme}) => {
   const navigate = useNavigate();
-  const [isActive, setIsActive] = useState('dashboard');
+  const [isActive, setIsActive] = useState('/');
+
+  const handleLogoClick = () => {
+    setIsActive('/'); // Reset isActive to 'dashboard' when clicking on the logo icon
+  };
 
   return (
     <div className="flex justify-between items-center flex-col sticky top-5 h-[93vh]">
       <Link to="/">
-        <Icon styles={`w-[52px] h-[52px] ${darkTheme?"bg-[#2c2f32]":"bg-white"}`} imgUrl={logo} />
+        <Icon styles={`w-[52px] h-[52px] ${darkTheme?"bg-[#2c2f32]":"bg-white"}`} imgUrl={logo} handleClick={handleLogoClick} />
       </Link>
 
       {/* <div className="flex-1 flex flex-col justify-between items-center bg-[#1c1c24] rounded-[20px] w-[76px] py-4 mt-12"> */}
