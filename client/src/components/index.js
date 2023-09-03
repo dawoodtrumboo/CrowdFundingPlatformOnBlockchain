@@ -9,3 +9,5 @@ export {default as CountBox} from './CountBox';
 export {default as HomeNav} from './HomeNav';
 export {default as CampaignCard} from './CampaignCard';
 export {default as Icon} from './Icon';
+export {default as ProfileCampaigns} from './ProfileCampaigns';
+export {default as CategoryButton} from './CategoryButton';
