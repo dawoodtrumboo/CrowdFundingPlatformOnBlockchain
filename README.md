@@ -3,7 +3,7 @@
 
 The project members include Dawood Trumboo, Aqeel Beigh, and Shaker Khan, who have collaborated to develop this innovative solution. Under the guidance and supervision of Dr. Sahil Sholla, our esteemed project supervisor, we aim to create a reliable and decentralized crowdfunding platform.</p>
 
-<h4> Presentation [Click Here](https://www.canva.com/design/DAFspDCcT88/y1RbsjuErD1dG9crcXJhpw/edit) </h4>[ </br>
+[Click Here](https://www.canva.com/design/DAFspDCcT88/y1RbsjuErD1dG9crcXJhpw/edit) </br>
 
 
 
