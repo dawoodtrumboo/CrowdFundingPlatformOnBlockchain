@@ -73,7 +73,7 @@ const DisplayCampaigns = ({ title, isLoading, campaigns, searchTerm, darkTheme }
         </h1>
         {/* Category Dropdown */}
         <select
-          className={`px-3 py-1 text-sm rounded-md mr-[30px] ${darkTheme? " bg-gray-200 text-gray-700": " bg-white text-gray-700"}`}
+          className={`px-3 py-1 text-sm rounded-md mr-[30px] ${darkTheme? " bg-[#1c1c24] text-white": " bg-white text-gray-700"}`}
           value={selectedCategory}
           onChange={handleCategorySelect}
         >

@@ -15,11 +15,11 @@ const CampaignCard = ({ title, target, deadline, amountCollected, image, handleC
           <h3 className={`font-epilogue font-normal text-[16px] text-left leading-[26px] truncate  ${darkTheme ? "text-white" : "text-black"}`}>{title}</h3>
           </div>
           <h3 className={`font-epilogue font-normal w-[150px] text-[16px] text-center leading-[26px] truncate ${darkTheme ? "text-white" : "text-black"}`}>{amountCollected} ETH / {target} ETH</h3>
-          <h3 className={`font-epilogue font-normal text-[16px]  leading-[26px] truncate w-[60px] border-solid text-center ${darkTheme ? "text-white" : "text-black"}`}>{remainingDays>=1 ? remainingDays : '0'}</h3>
+          <h3 className={`font-epilogue font-normal text-[16px]  leading-[26px] truncate w-[60px] border-solid text-center ${darkTheme ? "text-white  " : "text-black"}`}>{remainingDays>=1 ? remainingDays : '0'}</h3>
           <CustomButton 
           btnType="button"
           title={remainingDays>1 ? ' Active' : 'Inactive'}
-          styles={`text-[10px] w-[90px] rounded-full  ${remainingDays>1 ? 'bg-[#49D8A3]/[0.15] text-[#1BB87E] ' : 'bg-[#E03C3C]/[0.15] text-[#E03C3C]'} `}
+          styles={`text-[10px] w-[90px] rounded-full  ${remainingDays>1 ? (darkTheme?'bg-[#49D8A3]/[0.15] text-[#1bb87e] ' : 'bg-[#49D8A3]/[0.35] text-[#1bb87e] ' ) :  (darkTheme?'bg-[#E03C3C]/[0.15] text-[#e03c3c]' : 'bg-[#E03C3C]/[0.35] text-[#e03c3c]' ) } `}
         />
         </div>
       </div>
