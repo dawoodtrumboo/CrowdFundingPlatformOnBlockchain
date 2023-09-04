@@ -18,16 +18,16 @@ The project members include Dawood Trumboo, Aqeel Beigh, and Shaker Khan, who ha
 
 <h2> Project Images </h2>
 
-## Landing Page:
+* ## Landing Page:
 ![](Project-Images/LandingPage.png)
 
-### Dashboard:
+* ## Dashboard:
 ![](Project-Images/Dashboard.png)
 
-### Campaign Form:
+* ## Campaign Form:
 ![](Project-Images/createCampaign.png)
 
-### Profile:
+* ## Profile:
 ![](Project-Images/Profile.png)
 
   <h3>Project Members:<h3>
