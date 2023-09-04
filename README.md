@@ -28,7 +28,7 @@ The project members include Dawood Trumboo, Aqeel Beigh, and Shaker Khan, who ha
 ![](Project-Images/createCampaign.png)
 
 * ## Campaign Details:
-![](Project-Images/CampignDetails.png)
+![](Project-Images/CamapignDetails.png)
 
 * ## Profile:
 ![](Project-Images/Profile.png)
