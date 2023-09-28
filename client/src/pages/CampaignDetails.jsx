@@ -40,7 +40,9 @@ const CampaignDetails = ({darkTheme}) => {
 
   return (
     <div>
+      <div className='hidden md:block'>
       <HomeNav darkTheme={darkTheme} />
+      </div>
       {isLoading && <Loader />}
 
       <div className="w-full flex md:flex-row flex-col mt-10 gap-[30px]">

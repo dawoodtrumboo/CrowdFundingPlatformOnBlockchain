@@ -8,10 +8,13 @@ import { navlinks } from '../constants';
 
 const HomeNav = ({darkTheme}) => {
   const navigate = useNavigate();
-  const [isActive, setIsActive] = useState('dashboard');
+  const [isActive, setIsActive] = useState('/');
   const [toggleDrawer, setToggleDrawer] = useState(false);
   const { connect, address } = useStateContext();
 
+  const onC = () =>{
+    console.log("clicked")
+  }
   return (
     <div className="flex md:flex-row flex-col-reverse justify-end mb-[35px] gap-6">
       {/* <div className={`lg:flex-1 flex flex-row max-w-[458px] py-2 pl-4 pr-2 h-[52px] rounded-[100px] ${darkTheme? "bg-[#1c1c24]" : "bg-white"}`}>
@@ -42,9 +45,15 @@ const HomeNav = ({darkTheme}) => {
 
       {/* Small screen navigation */}
         <div className="sm:hidden flex justify-between items-center relative">
+        <Link to="/">  
         <div className={`w-[40px] h-[40px] rounded-[10px] bg-[#2c2f32] flex justify-center items-center cursor-pointer`}>
+        
             <img src={logo} alt="user" className="w-[60%] h-[60%] object-contain" />
+      
           </div>
+          </Link>
+        
+          
 
           <img 
             src={menu}

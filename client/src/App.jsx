@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { Route, Routes,useNavigate  } from 'react-router-dom';
+import { Route, Routes,useNavigate,Link  } from 'react-router-dom';
 import { Sidebar} from './components';
 import { CampaignDetails, CreateCampaign, Home, Profile } from './pages';
 import Landing from './pages/Landing';
@@ -32,9 +32,11 @@ const App = () => {
       <div className="flex-1 max-sm:w-full max-w-[1280px] mx-auto sm:pr-5"> 
      
       <div className="sm:hidden flex justify-between items-center relative mb-5">
+         <Link to="/">
         <div className="w-[40px] h-[40px] rounded-[10px] bg-[#2c2f32] flex justify-center items-center cursor-pointer">
-            <img src={logo} alt="user" className="w-[60%] h-[60%] object-contain" />
+          <img src={logo} alt="user" className="w-[60%] h-[60%] object-contain" />
           </div>
+          </Link>
 
           <img 
             src={menu}
@@ -77,6 +79,7 @@ const App = () => {
                 else connect();
               }}
             />
+            
             </div>
           </div>
         </div>
