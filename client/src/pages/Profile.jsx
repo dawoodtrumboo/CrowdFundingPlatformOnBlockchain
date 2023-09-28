@@ -12,7 +12,9 @@ const Profile = ({darkTheme}) => {
 
   return (
     <>
+    <div className='hidden sm:block'>
     <HomeNav darkTheme={darkTheme}/>
+    </div>
     {address ? (
         <ProfileCampaigns darkTheme={darkTheme} />
       ) : (
